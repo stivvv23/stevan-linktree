@@ -50,31 +50,25 @@ body {
     margin-bottom: 10px;
 }
 
-/* FIXED USERNAME */
+/* 🔥 FINAL USERNAME FIX */
 .username {
     margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
 
-    /* WAJIB 1 BARIS */
     white-space: nowrap;
     overflow: hidden;
 
-    /* AUTO SCALE BASE */
+    display: block;
+    text-align: center;
+
     font-size: 26px;
 
-    /* GRADIENT LEBIH SOLID */
-    background: linear-gradient(90deg, #ffffff, #ff7ad9, #ff4ecd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: rgba(255,255,255,0.95);
 
-    /* BACKUP BIAR GA HILANG */
-    color: #fff;
-
-    /* KONTRAS BIAR KEBACA */
     text-shadow:
-        0 2px 6px rgba(0,0,0,0.6),
-        0 0 10px rgba(0,0,0,0.4);
+        0 2px 8px rgba(0,0,0,0.6),
+        0 0 10px rgba(0,0,0,0.3);
 }
 
 .bio {
@@ -222,13 +216,13 @@ function autoScaleText() {
   const el = document.querySelector(".username");
   const parent = document.querySelector(".wrapper");
 
-  let maxSize = 26;
-  let minSize = 14;
+  let max = 26;
+  let min = 18; // biar ga kekecilan
 
-  let size = maxSize;
+  let size = max;
   el.style.fontSize = size + "px";
 
-  while (el.scrollWidth > parent.clientWidth - 50 && size > minSize) {
+  while (el.scrollWidth > parent.clientWidth - 60 && size > min) {
     size--;
     el.style.fontSize = size + "px";
   }
