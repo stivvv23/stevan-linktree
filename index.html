@@ -214,7 +214,7 @@ body {
 <script>
 function autoScaleText() {
   const el = document.querySelector(".username");
-  const parent = document.querySelector(".grid-area"); // 🔥 FIX: bukan wrapper
+  const parent = document.querySelector(".grid-area");
 
   let max = 28;
   let min = 16;
@@ -222,7 +222,6 @@ function autoScaleText() {
   let size = max;
   el.style.fontSize = size + "px";
 
-  // hitung lebar REAL (padding grid-area)
   const maxWidth = parent.clientWidth - 60;
 
   while (el.scrollWidth > maxWidth && size > min) {
@@ -235,9 +234,6 @@ window.addEventListener("load", autoScaleText);
 window.addEventListener("resize", autoScaleText);
 </script>
 
-window.addEventListener("load", autoScaleText);
-window.addEventListener("resize", autoScaleText);
-</script>
-
+  
 </body>
 </html>
