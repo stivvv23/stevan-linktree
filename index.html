@@ -26,24 +26,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-  <script>
-function autoScaleText() {
-  const el = document.getElementById("username");
-  const parent = el.parentElement;
-
-  let fontSize = 22; // max size
-  el.style.fontSize = fontSize + "px";
-
-  while (el.scrollWidth > parent.clientWidth && fontSize > 10) {
-    fontSize--;
-    el.style.fontSize = fontSize + "px";
-  }
-}
-
-window.addEventListener("load", autoScaleText);
-window.addEventListener("resize", autoScaleText);
-</script>
-  
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -81,14 +63,18 @@ body {
 }
 
 .username {
-    color: white;
     font-size: 22px;
     margin: 0;
     font-weight: 600;
     white-space: nowrap;
     transition: font-size 0.2s ease;
-}
+    letter-spacing: 0.5px;
 
+    /* GRADIENT */
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .bio {
     color: #eee;
     font-size: 14px;
@@ -241,6 +227,27 @@ body {
 
   </div>
 </div>
+  
+<script>
+function autoScaleText() {
+  const el = document.getElementById("username");
+  const parent = el.closest(".grid-area"); // lebih akurat
 
+  let fontSize = 22;
+  el.style.fontSize = fontSize + "px";
+
+  // reset dulu biar ga stuck
+  el.style.whiteSpace = "nowrap";
+
+  while (el.scrollWidth > parent.clientWidth - 40 && fontSize > 10) {
+    fontSize--;
+    el.style.fontSize = fontSize + "px";
+  }
+}
+
+window.addEventListener("load", autoScaleText);
+window.addEventListener("resize", autoScaleText);
+</script>
+  
 </body>
 </html>
