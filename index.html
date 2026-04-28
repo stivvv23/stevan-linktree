@@ -56,19 +56,25 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
 
+    /* WAJIB 1 BARIS */
     white-space: nowrap;
-    font-size: 28px;
+    overflow: hidden;
 
-    display: inline-block;
-    max-width: 100%;
-    transform-origin: center;
-    transition: transform 0.2s ease;
+    /* AUTO SCALE BASE */
+    font-size: 26px;
 
-    background: linear-gradient(90deg, #ffffff, #ff7ad9);
+    /* GRADIENT LEBIH SOLID */
+    background: linear-gradient(90deg, #ffffff, #ff7ad9, #ff4ecd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    /* BACKUP BIAR GA HILANG */
+    color: #fff;
+
+    /* KONTRAS BIAR KEBACA */
+    text-shadow:
+        0 2px 6px rgba(0,0,0,0.6),
+        0 0 10px rgba(0,0,0,0.4);
 }
 
 .bio {
@@ -212,24 +218,24 @@ body {
 </div>
 
 <script>
-function fitText() {
+function autoScaleText() {
   const el = document.querySelector(".username");
-  const parent = el.parentElement;
+  const parent = document.querySelector(".wrapper");
 
-  const elWidth = el.scrollWidth;
-  const parentWidth = parent.clientWidth - 40;
+  let maxSize = 26;
+  let minSize = 14;
 
-  let scale = 1;
+  let size = maxSize;
+  el.style.fontSize = size + "px";
 
-  if (elWidth > parentWidth) {
-    scale = parentWidth / elWidth;
+  while (el.scrollWidth > parent.clientWidth - 50 && size > minSize) {
+    size--;
+    el.style.fontSize = size + "px";
   }
-
-  el.style.transform = `scale(${scale})`;
 }
 
-window.addEventListener("load", fitText);
-window.addEventListener("resize", fitText);
+window.addEventListener("load", autoScaleText);
+window.addEventListener("resize", autoScaleText);
 </script>
 
 </body>
