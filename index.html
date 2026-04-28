@@ -8,11 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-/* GLOBAL FIX */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -25,22 +21,17 @@ body {
 
 .wrapper {
     width: 380px;
+}
+
+.grid-area {
     background: rgba(255,255,255,0.12);
     border-radius: 25px;
     padding: 25px;
     border: 2px solid rgba(255,255,255,0.35);
-}
-
-.grid-area {
-    background-image:
-        linear-gradient(#ffffff25 1px, transparent 1px),
-        linear-gradient(90deg, #ffffff25 1px, transparent 1px);
-    background-size: 35px 35px;
-    border-radius: 20px;
-    padding: 25px;
     text-align: center;
 }
 
+/* FOTO */
 .profile-pic {
     width: 115px;
     height: 115px;
@@ -55,23 +46,26 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
 
-    white-space: nowrap;
-    display: block;
-
-    max-width: 100%; /* biar ga keluar */
-
     font-size: 28px;
-    color: rgba(255,255,255,0.95);
-
+    color: #fff;
     text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+
+    /* 🔥 FIX UTAMA */
+    display: block;
+    width: 100%;          /* paksa ikut container */
+    overflow: hidden;     /* potong kalau kepanjangan */
+    white-space: nowrap;  
+    text-align: center;   /* biar tetap di tengah */
 }
 
+/* BIO */
 .bio {
     color: #eee;
     font-size: 14px;
     margin: 5px 0 15px;
 }
 
+/* SOSMED */
 .socials {
     display: flex;
     justify-content: center;
@@ -90,15 +84,16 @@ body {
     opacity: 0.8;
 }
 
+/* LINK */
 .links {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
     margin-bottom: 25px;
 }
 
 .link-btn {
+    display: block;
     width: 100%;
     background: #ff68c0;
     border: 3px solid black;
@@ -108,27 +103,18 @@ body {
     color: black;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.25s;
+
+    position: relative;
+    z-index: 2;
 }
 
-.link-btn:hover {
-    transform: scale(1.05);
-    background: #ff76cc;
-}
-
-/* CONTACT FIX */
+/* CONTACT */
 .contact-box {
-    margin-top: 60px;
+    margin-top: 40px;
     padding: 20px;
     background: rgba(255,255,255,0.18);
     border-radius: 25px;
     border: 1.5px solid rgba(255,255,255,0.25);
-}
-
-.contact-box h3 {
-    color: white;
-    font-size: 16px;
-    margin-bottom: 12px;
 }
 
 .contact-box form {
@@ -149,11 +135,9 @@ body {
 
 .contact-box textarea {
     min-height: 120px;
-    resize: none;
 }
 
 .contact-box button {
-    width: 100%;
     padding: 14px;
     border-radius: 16px;
     border: 3px solid black;
@@ -164,11 +148,9 @@ body {
 
 .footer {
     margin-top: 16px;
-    text-align: center;
     color: white;
     font-size: 12px;
 }
-
 </style>
 </head>
 
@@ -179,7 +161,7 @@ body {
 
     <img src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg" class="profile-pic">
 
-    <h2 class="username">Stevan William Christharyanto</h2>
+    <h2 class="username" id="username">Stevan William Christharyanto</h2>
 
     <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
 
@@ -198,7 +180,6 @@ body {
     </div>
 
     <div class="contact-box">
-      <h3>Contact Me</h3>
       <form>
         <input type="text" placeholder="Nama kamu">
         <textarea placeholder="Tulis pesan..."></textarea>
@@ -211,29 +192,5 @@ body {
   </div>
 </div>
 
-<script>
-function autoScaleText() {
-  const el = document.querySelector(".username");
-  const parent = document.querySelector(".grid-area");
-
-  let max = 28;
-  let min = 16;
-
-  let size = max;
-  el.style.fontSize = size + "px";
-
-  const maxWidth = parent.clientWidth - 60;
-
-  while (el.scrollWidth > maxWidth && size > min) {
-    size--;
-    el.style.fontSize = size + "px";
-  }
-}
-
-window.addEventListener("load", autoScaleText);
-window.addEventListener("resize", autoScaleText);
-</script>
-
-  
 </body>
 </html>
