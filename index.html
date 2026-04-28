@@ -4,25 +4,13 @@
 <meta charset="UTF-8">
 <title> Stevan | Linktree </title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
-  <link rel="icon" href="favicon_io/favicon.ico">
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9C0N1BFJD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B9C0N1BFJD');
-</script>
+<link rel="icon" href="favicon_io/favicon.ico">
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -62,23 +50,27 @@ body {
     margin-bottom: 10px;
 }
 
+/* FIXED USERNAME */
 .username {
-    font-size: 22px;
     margin: 0;
     font-weight: 700;
-    white-space: nowrap;
-    transition: font-size 0.2s ease;
     letter-spacing: 0.5px;
 
-    /* GRADIENT KONTRAS */
-    background: linear-gradient(90deg, #ffffff, #ff4ecd, #7df9ff);
+    white-space: nowrap;
+    font-size: 28px;
+
+    display: inline-block;
+    max-width: 100%;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+
+    background: linear-gradient(90deg, #ffffff, #ff7ad9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    /* DEPTH BIAR KEBACA */
-    text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
 }
-  
+
 .bio {
     color: #eee;
     font-size: 14px;
@@ -129,60 +121,46 @@ body {
     background: #ff76cc;
 }
 
-/* CONTACT FORM */
 .contact-box {
     margin-top: 60px;
     padding: 20px;
     background: rgba(255,255,255,0.18);
     border-radius: 25px;
     border: 1.5px solid rgba(255,255,255,0.25);
-    position: relative;
 }
 
 .contact-box h3 {
     color: white;
     font-size: 16px;
     margin-bottom: 12px;
-    font-weight: 600;
 }
-.contact-box form{ 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+.contact-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 .contact-box input,
 .contact-box textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     border-radius: 15px;
     border: none;
     outline: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
 }
 
 .contact-box textarea {
-    resize: none;
     min-height: 120px;
 }
 
 .contact-box button {
-    width: 100%;
     padding: 14px;
     border-radius: 16px;
     border: 3px solid black;
     background: #ff68c0;
-    color: black;
     font-weight: 600;
-    font-size: 15px;
     cursor: pointer;
-    transition: 0.25s;
-}
-
-.contact-box button:hover {
-    transform: scale(1.05);
-    background: #ff76cc;
 }
 
 .footer {
@@ -199,31 +177,32 @@ body {
 <div class="wrapper">
   <div class="grid-area">
 
-    <img src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg?io=true&size=avatar-v1_0" class="profile-pic">
+    <img src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg" class="profile-pic">
 
-   <h2 class="username" id="username">Stevan William Christharyanto</h2>
+    <h2 class="username">Stevan William Christharyanto</h2>
+
     <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
 
     <div class="socials">
-      <a href="https://www.instagram.com/van_william23?igsh=OHZ0MmxtMjRtM2N3"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@sttvann23"><i class="fab fa-tiktok"></i></a>
-      <a href="https://github.com/stivvv23"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com/@vanz_23rd?si=UxGhzgcUcJ43TjMW"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
 
     <div class="links">
-      <a class="link-btn" href="https://tiktok.com/@sttvann23">TikTok</a>
-      <a class="link-btn" href="https://www.instagram.com/van_william23?igsh=OHZ0MmxtMjRtM2N3">Instagram</a>
-      <a class="link-btn" href="https://github.com/stivvv23">GitHub</a>
-      <a class="link-btn" href="https://youtube.com/@vanz_23rd?si=UxGhzgcUcJ43TjMW">YouTube</a>
+      <a class="link-btn" href="#">TikTok</a>
+      <a class="link-btn" href="#">Instagram</a>
+      <a class="link-btn" href="#">GitHub</a>
+      <a class="link-btn" href="#">YouTube</a>
     </div>
 
-    <div id="contact" class="contact-box">
+    <div class="contact-box">
       <h3>Contact Me</h3>
-      <form action="https://formspree.io/f/mzznywzo" method="POST">
-        <input type="text" name="name" placeholder="Nama kamu" required>
-        <textarea name="message" placeholder="Tulis pesan..." required></textarea>
-        <button type="submit">Kirim Pesan</button>
+      <form>
+        <input type="text" placeholder="Nama kamu">
+        <textarea placeholder="Tulis pesan..."></textarea>
+        <button>Kirim Pesan</button>
       </form>
     </div>
 
@@ -231,27 +210,27 @@ body {
 
   </div>
 </div>
-  
+
 <script>
-function autoScaleText() {
-  const el = document.getElementById("username");
-  const parent = el.closest(".grid-area"); // lebih akurat
+function fitText() {
+  const el = document.querySelector(".username");
+  const parent = el.parentElement;
 
-  let fontSize = 22;
-  el.style.fontSize = fontSize + "px";
+  const elWidth = el.scrollWidth;
+  const parentWidth = parent.clientWidth - 40;
 
-  // reset dulu biar ga stuck
-  el.style.whiteSpace = "nowrap";
+  let scale = 1;
 
-  while (el.scrollWidth > parent.clientWidth - 40 && fontSize > 10) {
-    fontSize--;
-    el.style.fontSize = fontSize + "px";
+  if (elWidth > parentWidth) {
+    scale = parentWidth / elWidth;
   }
+
+  el.style.transform = `scale(${scale})`;
 }
 
-window.addEventListener("load", autoScaleText);
-window.addEventListener("resize", autoScaleText);
+window.addEventListener("load", fitText);
+window.addEventListener("resize", fitText);
 </script>
-  
+
 </body>
 </html>
