@@ -26,6 +26,24 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+  <script>
+function autoScaleText() {
+  const el = document.getElementById("username");
+  const parent = el.parentElement;
+
+  let fontSize = 22; // max size
+  el.style.fontSize = fontSize + "px";
+
+  while (el.scrollWidth > parent.clientWidth && fontSize > 10) {
+    fontSize--;
+    el.style.fontSize = fontSize + "px";
+  }
+}
+
+window.addEventListener("load", autoScaleText);
+window.addEventListener("resize", autoScaleText);
+</script>
+  
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -62,13 +80,13 @@ body {
     margin-bottom: 10px;
 }
 
-
- .username {
+.username {
     color: white;
-    font-size: clamp(14px, 3.5vw, 22px);
+    font-size: 22px;
     margin: 0;
     font-weight: 600;
     white-space: nowrap;
+    transition: font-size 0.2s ease;
 }
 
 .bio {
@@ -193,7 +211,7 @@ body {
 
     <img src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg?io=true&size=avatar-v1_0" class="profile-pic">
 
-    <h2 class="username">Stevan William Christharyanto</h2>
+   <h2 class="username" id="username">Stevan William Christharyanto</h2>
     <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
 
     <div class="socials">
