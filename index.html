@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title> Stevan | Linktree </title>
-
-<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-<link rel="manifest" href="favicon_io/site.webmanifest">
-<link rel="icon" href="favicon_io/favicon.ico">
+<title>Stevan | Linktree</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+/* GLOBAL FIX */
+* {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -50,25 +50,20 @@ body {
     margin-bottom: 10px;
 }
 
-/* 🔥 FINAL USERNAME FIX */
 .username {
     margin: 0;
     font-weight: 700;
     letter-spacing: 0.5px;
 
     white-space: nowrap;
-    overflow: hidden;
-
     display: block;
-    text-align: center;
 
-    font-size: 26px;
+    max-width: 100%; /* biar ga keluar */
 
+    font-size: 28px;
     color: rgba(255,255,255,0.95);
 
-    text-shadow:
-        0 2px 8px rgba(0,0,0,0.6),
-        0 0 10px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .bio {
@@ -104,7 +99,7 @@ body {
 }
 
 .link-btn {
-    width: 90%;
+    width: 100%;
     background: #ff68c0;
     border: 3px solid black;
     padding: 15px;
@@ -121,6 +116,7 @@ body {
     background: #ff76cc;
 }
 
+/* CONTACT FIX */
 .contact-box {
     margin-top: 60px;
     padding: 20px;
@@ -148,13 +144,16 @@ body {
     border-radius: 15px;
     border: none;
     outline: none;
+    font-family: "Poppins", sans-serif;
 }
 
 .contact-box textarea {
     min-height: 120px;
+    resize: none;
 }
 
 .contact-box button {
+    width: 100%;
     padding: 14px;
     border-radius: 16px;
     border: 3px solid black;
@@ -169,6 +168,7 @@ body {
     color: white;
     font-size: 12px;
 }
+
 </style>
 </head>
 
@@ -214,19 +214,26 @@ body {
 <script>
 function autoScaleText() {
   const el = document.querySelector(".username");
-  const parent = document.querySelector(".wrapper");
+  const parent = document.querySelector(".grid-area"); // 🔥 FIX: bukan wrapper
 
-  let max = 26;
-  let min = 18; // biar ga kekecilan
+  let max = 28;
+  let min = 16;
 
   let size = max;
   el.style.fontSize = size + "px";
 
-  while (el.scrollWidth > parent.clientWidth - 60 && size > min) {
+  // hitung lebar REAL (padding grid-area)
+  const maxWidth = parent.clientWidth - 60;
+
+  while (el.scrollWidth > maxWidth && size > min) {
     size--;
     el.style.fontSize = size + "px";
   }
 }
+
+window.addEventListener("load", autoScaleText);
+window.addEventListener("resize", autoScaleText);
+</script>
 
 window.addEventListener("load", autoScaleText);
 window.addEventListener("resize", autoScaleText);
