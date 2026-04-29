@@ -1,0 +1,25 @@
+<div class="docs-demo-html">
+  <div class="large centered row">
+    <p class="text-xl">Stevan William Christharyanto</p>
+  </div>
+  <div class="small row"></div>
+</div>
+
+.split-char {
+  color: var(--hex-current-1);
+  background-color: var(--hex-current-3);
+  outline: 1px solid var(--hex-current-2);
+  border-radius: .25rem;
+}
+
+import { animate, stagger, splitText } from 'https://esm.sh/animejs';
+
+splitText('p', {
+  chars: { class: 'split-char' },
+});
+
+animate('.split-char', {
+  y: ['0rem', '-1rem', '0rem'],
+  loop: true,
+  delay: stagger(100)
+});
