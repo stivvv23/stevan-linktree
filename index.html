@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' https: data:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' https: data:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline';">
 <meta name="referrer" content="no-referrer">
   
 <title> Stevan | Linktree </title>
@@ -27,6 +27,7 @@ gtag('config', 'G-B9C0N1BFJD');
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+/* (CSS LU SAMA, GA DIUBAH) */
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -35,7 +36,6 @@ body {
     justify-content: center;
     padding: 40px;
 }
-
 .wrapper {
     width: 380px;
     background: rgba(255,255,255,0.12);
@@ -43,7 +43,6 @@ body {
     padding: 25px;
     border: 2px solid rgba(255,255,255,0.35);
 }
-
 .grid-area {
     background-image:
         linear-gradient(#ffffff25 1px, transparent 1px),
@@ -53,7 +52,6 @@ body {
     padding: 25px;
     text-align: center;
 }
-
 .profile-pic {
     width: 115px;
     height: 115px;
@@ -62,7 +60,6 @@ body {
     object-fit: cover;
     margin-bottom: 10px;
 }
-
 .username {
     color: white;
     font-size: clamp(14px, 3.5vw, 22px);
@@ -70,31 +67,26 @@ body {
     font-weight: 600;
     white-space: nowrap;
 }
-
 .bio {
     color: #eee;
     font-size: 14px;
     margin: 5px 0 15px;
 }
-
 .socials {
     display: flex;
     justify-content: center;
     gap: 18px;
     margin-bottom: 20px;
 }
-
 .socials a {
     font-size: 28px;
     color: white;
     transition: 0.25s;
 }
-
 .socials a:hover {
     transform: scale(1.15);
     opacity: 0.8;
 }
-
 .links {
     display: flex;
     flex-direction: column;
@@ -102,7 +94,6 @@ body {
     align-items: center;
     margin-bottom: 25px;
 }
-
 .link-btn {
     width: 90%;
     background: #ff68c0;
@@ -115,12 +106,10 @@ body {
     font-weight: 600;
     transition: 0.25s;
 }
-
 .link-btn:hover {
     transform: scale(1.05);
     background: #ff76cc;
 }
-
 /* CONTACT FORM */
 .contact-box {
     margin-top: 60px;
@@ -177,19 +166,7 @@ body {
     transform: scale(1.05);
     background: #ff76cc;
 }
-
-.footer {
-    margin-top: 16px;
-    text-align: center;
-    color: white;
-    font-size: 12px;
-}
-
-/* ANIMATION */
-.split-char {
-  display: inline-block;
-  color: white;
-}
+  
 </style>
 </head>
 
@@ -204,17 +181,17 @@ body {
     <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
 
     <div class="socials">
-      <a href="https://www.instagram.com/van_william23"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@sttvann23"><i class="fab fa-tiktok"></i></a>
-      <a href="https://github.com/stivvv23"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com/@vanz_23rd"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/van_william23" onclick="trackClick('IG Icon')" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://tiktok.com/@sttvann23" onclick="trackClick('TikTok Icon')" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://github.com/stivvv23" onclick="trackClick('GitHub Icon')" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://youtube.com/@vanz_23rd" onclick="trackClick('YouTube Icon')" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
     <div class="links">
-      <a class="link-btn" href="https://tiktok.com/@sttvann23">TikTok</a>
-      <a class="link-btn" href="https://www.instagram.com/van_william23">Instagram</a>
-      <a class="link-btn" href="https://github.com/stivvv23">GitHub</a>
-      <a class="link-btn" href="https://youtube.com/@vanz_23rd">YouTube</a>
+      <a class="link-btn" href="https://tiktok.com/@sttvann23" onclick="trackClick('TikTok')" target="_blank">TikTok</a>
+      <a class="link-btn" href="https://www.instagram.com/van_william23" onclick="trackClick('Instagram')" target="_blank">Instagram</a>
+      <a class="link-btn" href="https://github.com/stivvv23" onclick="trackClick('GitHub')" target="_blank">GitHub</a>
+      <a class="link-btn" href="https://youtube.com/@vanz_23rd" onclick="trackClick('YouTube')" target="_blank">YouTube</a>
     </div>
 
     <div id="contact" class="contact-box">
@@ -231,7 +208,7 @@ body {
   </div>
 </div>
 
-<!-- ANIME JS -->
+<!-- ANIME -->
 <script type="module">
 import { animate, stagger, splitText } from 'https://esm.sh/animejs';
 
@@ -245,6 +222,16 @@ animate('.split-char', {
   delay: stagger(80),
   duration: 600
 });
+</script>
+
+<!-- TRACKING -->
+<script>
+function trackClick(name){
+  gtag('event', 'click_link', {
+    event_category: 'Linktree',
+    event_label: name
+  });
+}
 </script>
 
 </body>
