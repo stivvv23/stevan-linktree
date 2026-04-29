@@ -4,25 +4,22 @@
 <meta charset="UTF-8">
 <title> Stevan | Linktree </title>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 <link rel="manifest" href="favicon_io/site.webmanifest">
-  <link rel="icon" href="favicon_io/favicon.ico">
+<link rel="icon" href="favicon_io/favicon.ico">
   
-<!-- Google tag (gtag.js) -->
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9C0N1BFJD"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B9C0N1BFJD');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-B9C0N1BFJD');
 </script>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -62,8 +59,7 @@ body {
     margin-bottom: 10px;
 }
 
-
- .username {
+.username {
     color: white;
     font-size: clamp(14px, 3.5vw, 22px);
     margin: 0;
@@ -128,7 +124,6 @@ body {
     background: rgba(255,255,255,0.18);
     border-radius: 25px;
     border: 1.5px solid rgba(255,255,255,0.25);
-    position: relative;
 }
 
 .contact-box h3 {
@@ -137,11 +132,13 @@ body {
     margin-bottom: 12px;
     font-weight: 600;
 }
+
 .contact-box form{ 
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+
 .contact-box input,
 .contact-box textarea {
     width: 100%;
@@ -183,6 +180,12 @@ body {
     color: white;
     font-size: 12px;
 }
+
+/* ANIMATION */
+.split-char {
+  display: inline-block;
+  color: white;
+}
 </style>
 </head>
 
@@ -197,17 +200,17 @@ body {
     <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
 
     <div class="socials">
-      <a href="https://www.instagram.com/van_william23?igsh=OHZ0MmxtMjRtM2N3"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/van_william23"><i class="fab fa-instagram"></i></a>
       <a href="https://tiktok.com/@sttvann23"><i class="fab fa-tiktok"></i></a>
       <a href="https://github.com/stivvv23"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com/@vanz_23rd?si=UxGhzgcUcJ43TjMW"><i class="fab fa-youtube"></i></a>
+      <a href="https://youtube.com/@vanz_23rd"><i class="fab fa-youtube"></i></a>
     </div>
 
     <div class="links">
       <a class="link-btn" href="https://tiktok.com/@sttvann23">TikTok</a>
-      <a class="link-btn" href="https://www.instagram.com/van_william23?igsh=OHZ0MmxtMjRtM2N3">Instagram</a>
+      <a class="link-btn" href="https://www.instagram.com/van_william23">Instagram</a>
       <a class="link-btn" href="https://github.com/stivvv23">GitHub</a>
-      <a class="link-btn" href="https://youtube.com/@vanz_23rd?si=UxGhzgcUcJ43TjMW">YouTube</a>
+      <a class="link-btn" href="https://youtube.com/@vanz_23rd">YouTube</a>
     </div>
 
     <div id="contact" class="contact-box">
@@ -223,6 +226,22 @@ body {
 
   </div>
 </div>
+
+<!-- ANIME JS -->
+<script type="module">
+import { animate, stagger, splitText } from 'https://esm.sh/animejs';
+
+splitText('.username', {
+  chars: { class: 'split-char' },
+});
+
+animate('.split-char', {
+  y: ['0rem', '-0.8rem', '0rem'],
+  loop: true,
+  delay: stagger(80),
+  duration: 600
+});
+</script>
 
 </body>
 </html>
