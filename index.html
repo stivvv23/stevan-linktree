@@ -1,238 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' https: data:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline';">
-<meta name="referrer" content="no-referrer">
-  
-<title> Stevan | Linktree </title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https:; img-src 'self' https: data:; script-src 'self' https: 'unsafe-inline'; style-src 'self' https: 'unsafe-inline';"
+    />
+    <meta name="referrer" content="no-referrer" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-<link rel="manifest" href="favicon_io/site.webmanifest">
-<link rel="icon" href="favicon_io/favicon.ico">
-  
-<!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9C0N1BFJD"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-B9C0N1BFJD');
-</script>
+    <title>Stevan | Linktree</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
+    <link rel="icon" href="favicon_io/favicon.ico" />
 
-<style>
+    <!-- Google tag -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-B9C0N1BFJD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-B9C0N1BFJD");
+    </script>
 
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: #a05cf6;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-}
-.wrapper {
-    width: 380px;
-    background: rgba(255,255,255,0.12);
-    border-radius: 25px;
-    padding: 25px;
-    border: 2px solid rgba(255,255,255,0.35);
-}
-.grid-area {
-    background-image:
-        linear-gradient(#ffffff25 1px, transparent 1px),
-        linear-gradient(90deg, #ffffff25 1px, transparent 1px);
-    background-size: 35px 35px;
-    border-radius: 20px;
-    padding: 25px;
-    text-align: center;
-}
-.profile-pic {
-    width: 115px;
-    height: 115px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-.username {
-    color: white;
-    font-size: clamp(14px, 3.5vw, 22px);
-    margin: 0;
-    font-weight: 600;
-    white-space: nowrap;
-}
-.bio {
-    color: #eee;
-    font-size: 14px;
-    margin: 5px 0 15px;
-}
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin-bottom: 20px;
-}
-.socials a {
-    font-size: 28px;
-    color: white;
-    transition: 0.25s;
-}
-.socials a:hover {
-    transform: scale(1.15);
-    opacity: 0.8;
-}
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 25px;
-}
-.link-btn {
-    width: 90%;
-    background: #ff68c0;
-    border: 3px solid black;
-    padding: 15px;
-    border-radius: 12px;
-    font-size: 17px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
-}
-.link-btn:hover {
-    transform: scale(1.05);
-    background: #ff76cc;
-}
-/* CONTACT FORM */
-.contact-box {
-    margin-top: 60px;
-    padding: 20px;
-    background: rgba(255,255,255,0.18);
-    border-radius: 25px;
-    border: 1.5px solid rgba(255,255,255,0.25);
-}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-.contact-box h3 {
-    color: white;
-    font-size: 16px;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #a05cf6;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+      }
+      .wrapper {
+        width: 380px;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 25px;
+        padding: 25px;
+        border: 2px solid rgba(255, 255, 255, 0.35);
+      }
+      .grid-area {
+        background-image:
+          linear-gradient(#ffffff25 1px, transparent 1px),
+          linear-gradient(90deg, #ffffff25 1px, transparent 1px);
+        background-size: 35px 35px;
+        border-radius: 20px;
+        padding: 25px;
+        text-align: center;
+      }
+      .profile-pic {
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+      .username {
+        color: white;
+        font-size: clamp(14px, 3.5vw, 22px);
+        margin: 0;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .bio {
+        color: #eee;
+        font-size: 14px;
+        margin: 5px 0 15px;
+      }
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 20px;
+      }
+      .socials a {
+        font-size: 28px;
+        color: white;
+        transition: 0.25s;
+      }
+      .socials a:hover {
+        transform: scale(1.15);
+        opacity: 0.8;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+      .link-btn {
+        width: 90%;
+        background: #ff68c0;
+        border: 3px solid black;
+        padding: 15px;
+        border-radius: 12px;
+        font-size: 17px;
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.25s;
+      }
+      .link-btn:hover {
+        transform: scale(1.05);
+        background: #ff76cc;
+      }
+      /* CONTACT FORM */
+      .contact-box {
+        margin-top: 60px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 25px;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+      }
 
-.contact-box form{ 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+      .contact-box h3 {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 12px;
+        font-weight: 600;
+      }
 
-.contact-box input,
-.contact-box textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
-    box-sizing: border-box;
-}
+      .contact-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
 
-.contact-box textarea {
-    resize: none;
-    min-height: 120px;
-}
+      .contact-box input,
+      .contact-box textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
 
-.contact-box button {
-    width: 100%;
-    padding: 14px;
-    border-radius: 16px;
-    border: 3px solid black;
-    background: #ff68c0;
-    color: black;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.25s;
-}
+      .contact-box textarea {
+        resize: none;
+        min-height: 120px;
+      }
 
-.contact-box button:hover {
-    transform: scale(1.05);
-    background: #ff76cc;
-}
-  
-</style>
-</head>
+      .contact-box button {
+        width: 100%;
+        padding: 14px;
+        border-radius: 16px;
+        border: 3px solid black;
+        background: #ff68c0;
+        color: black;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.25s;
+      }
 
-<body>
+      .contact-box button:hover {
+        transform: scale(1.05);
+        background: #ff76cc;
+      }
+    </style>
+  </head>
 
-<div class="wrapper">
-  <div class="grid-area">
+  <body>
+    <div class="wrapper">
+      <div class="grid-area">
+        <img
+          src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg?io=true&size=avatar-v1_0"
+          class="profile-pic"
+        />
 
-    <img src="https://ugc.production.linktr.ee/0ef1242e-f8e6-49b2-9969-683b420da08b_WhatsApp-Image-2025-11-14-at-13.46.06.jpeg?io=true&size=avatar-v1_0" class="profile-pic">
+        <h2 class="username">Stevan William Christharyanto</h2>
+        <p class="bio">
+          an INFP who loves nature, new things, and loves things in the field of
+          technology
+        </p>
 
-    <h2 class="username">Stevan William Christharyanto</h2>
-    <p class="bio">an INFP who loves nature, new things, and loves things in the field of technology</p>
+        <div class="socials">
+          <a
+            href="https://www.instagram.com/stevan.william23?stkn=OHZ0MmxtMjRtM2N3"
+            onclick="trackClick('IG Icon')"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://tiktok.com/@sttvann23"
+            onclick="trackClick('TikTok Icon')"
+            target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a
+            href="https://github.com/stivvv23"
+            onclick="trackClick('GitHub Icon')"
+            target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://youtube.com/@vanz_23rd"
+            onclick="trackClick('YouTube Icon')"
+            target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
 
-    <div class="socials">
-      <a href="https://www.instagram.com/van_william23" onclick="trackClick('IG Icon')" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://tiktok.com/@sttvann23" onclick="trackClick('TikTok Icon')" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://github.com/stivvv23" onclick="trackClick('GitHub Icon')" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://youtube.com/@vanz_23rd" onclick="trackClick('YouTube Icon')" target="_blank"><i class="fab fa-youtube"></i></a>
+        <div class="links">
+          <a
+            class="link-btn"
+            href="https://tiktok.com/@sttvann23"
+            onclick="trackClick('TikTok')"
+            target="_blank"
+            >TikTok</a
+          >
+          <a
+            class="link-btn"
+            href="https://www.instagram.com/stevan.william23?stkn=OHZ0MmxtMjRtM2N3"
+            onclick="trackClick('Instagram')"
+            target="_blank"
+            >Instagram</a
+          >
+          <a
+            class="link-btn"
+            href="https://github.com/stivvv23"
+            onclick="trackClick('GitHub')"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            class="link-btn"
+            href="https://youtube.com/@vanz_23rd"
+            onclick="trackClick('YouTube')"
+            target="_blank"
+            >YouTube</a
+          >
+        </div>
+
+        <div id="contact" class="contact-box">
+          <h3>Contact Me</h3>
+          <form action="https://formspree.io/f/mzznywzo" method="POST">
+            <input type="text" name="name" placeholder="Nama kamu" required />
+            <textarea
+              name="message"
+              placeholder="Tulis pesan..."
+              required
+            ></textarea>
+            <button type="submit">Kirim Pesan</button>
+          </form>
+        </div>
+
+        <div class="footer">© 2026 Stevan William C.</div>
+      </div>
     </div>
 
-    <div class="links">
-      <a class="link-btn" href="https://tiktok.com/@sttvann23" onclick="trackClick('TikTok')" target="_blank">TikTok</a>
-      <a class="link-btn" href="https://www.instagram.com/van_william23" onclick="trackClick('Instagram')" target="_blank">Instagram</a>
-      <a class="link-btn" href="https://github.com/stivvv23" onclick="trackClick('GitHub')" target="_blank">GitHub</a>
-      <a class="link-btn" href="https://youtube.com/@vanz_23rd" onclick="trackClick('YouTube')" target="_blank">YouTube</a>
-    </div>
+    <!-- ANIME -->
+    <script type="module">
+      import { animate, stagger, splitText } from "https://esm.sh/animejs";
 
-    <div id="contact" class="contact-box">
-      <h3>Contact Me</h3>
-      <form action="https://formspree.io/f/mzznywzo" method="POST">
-        <input type="text" name="name" placeholder="Nama kamu" required>
-        <textarea name="message" placeholder="Tulis pesan..." required></textarea>
-        <button type="submit">Kirim Pesan</button>
-      </form>
-    </div>
+      splitText(".username", {
+        chars: { class: "split-char" },
+      });
 
-    <div class="footer">© 2026 Stevan William C.</div>
+      animate(".split-char", {
+        y: ["0rem", "-0.8rem", "0rem"],
+        loop: true,
+        delay: stagger(80),
+        duration: 600,
+      });
+    </script>
 
-  </div>
-</div>
-
-<!-- ANIME -->
-<script type="module">
-import { animate, stagger, splitText } from 'https://esm.sh/animejs';
-
-splitText('.username', {
-  chars: { class: 'split-char' },
-});
-
-animate('.split-char', {
-  y: ['0rem', '-0.8rem', '0rem'],
-  loop: true,
-  delay: stagger(80),
-  duration: 600
-});
-</script>
-
-<!-- TRACKING -->
-<script>
-function trackClick(name){
-  gtag('event', 'click_link', {
-    event_category: 'Linktree',
-    event_label: name
-  });
-}
-</script>
-
-</body>
+    <!-- TRACKING -->
+    <script>
+      function trackClick(name) {
+        gtag("event", "click_link", {
+          event_category: "Linktree",
+          event_label: name,
+        });
+      }
+    </script>
+  </body>
 </html>
